@@ -1,0 +1,30 @@
+//terminal
+// which docker-machine
+// wget https://githube.com/docker/machine/releases/download/v0.3.0/docker-machine_linux-amd64
+// docker-machine ls
+// docker-machine create --driver virtualbox dev
+// docker-machine ls
+// docker-machine env dev
+// docker info
+// eval (docker-machine env dev)
+// docker info
+// docker-machine env
+// docker-machine env dev
+// set SHELL /bin/bash
+// docker-machine env dev
+// cd ~/.docker/machine/machines/dev
+// pwd
+// s
+// cd dev/
+// docker-machine ssh dev
+// ls
+
+
+//more terminal comands
+// docker info
+// docker runb -d -p 80:3000 cadbot/myservice
+// docker ps
+// docker-machine ls
+// curl http://192.168.99.100
+// docker-machine ip dev
+// curl (docker-machine ip dev)

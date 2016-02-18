@@ -1,0 +1,6 @@
+//terminal
+// docker run -d -P ngnix
+// docker ps
+// docker run -d -P -e affinity:image==ngix ngix
+// docker ps
+// 

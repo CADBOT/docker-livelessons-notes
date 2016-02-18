@@ -1,0 +1,5 @@
+//terminal
+// docker run -d cadbot/myservice
+// docker ps
+// docker run -d cadbot/myservice
+// docker ps

@@ -1,0 +1,45 @@
+//terminal
+// kubectl create -f apache-rc.yaml
+// kubectl get pods
+// vi apache-service.yaml
+
+/* apache-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+	 name: frontend-service
+	 	ports:
+	 	- port: 80
+	 		targetPort: 80
+	 		protocol: TCP
+spec:
+	ports:
+	selector:
+		tier: frontend
+*/
+
+//terminal
+// kubectl get pod
+// kubectl create -f apache-service.yaml
+// kubectl get service
+// kubectl get pod
+// vi apache-service-yaml
+
+/* apache-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+	 name: frontend-service
+	 	ports:
+	 	- port: 8000
+	 		targetPort: 80
+	 		protocol: TCP
+spec:
+	ports:
+	selector:
+		tier: frontend
+*/
+
+//terminal
+// kubectl create -f apache-service.yaml
+// kubectl get service

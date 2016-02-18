@@ -1,0 +1,12 @@
+//terminal
+// docker-machine create -d digitalocean --digitalocean-access-token bb44ble0cfeda699355edcfe32e8c0a865ddabb835a69ffccda8603947b256df1 --digitalocean-region sfo1 staging
+// docker-machine ls
+// docker-machine env staging
+// eval (docker-machine env staging)
+// docker info
+// docker-compose -f production-docker-compose.yml -d up
+// docker-compose -f production-docker-compose.yml up
+// docker-machine ls
+// curl http://104.236.176.127/users
+// curl (docker-machine ip staging)
+// curl (docker-machine ip staging)/users

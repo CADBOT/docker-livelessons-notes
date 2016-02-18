@@ -1,0 +1,90 @@
+//terminal
+// vi server.js
+
+/* server.js 
+var express = require('express');
+var app = express();
+
+app.get('/', functin(req, res) {
+	res.json({'msg': 'some message'})
+});
+
+var port = process.env.port || 300;
+app.listen(port, function() {
+	console.log('server started');
+});
+*/
+
+//terminal
+// vi docker-compose.yml
+
+/* docker-compose.yml
+webservice:
+	build: . 
+	ports:
+		- "3000:80"
+	environment: 
+		port: "80"
+*/
+
+//terminal
+// docker-compose up
+// docker-compose run webservice
+// docker ps
+// curl http://localhost:3000
+// docker-compose ps
+// docker ps
+// docker stop service_webservice_run_1
+// curl http://localhost:3000
+// vi server.js
+
+/* changes to server.js
+
+change res.json msg to 'hello world!'
+
+*/
+
+//terminal
+// docker-compose up -d
+// curl http://localhost:3000
+// docker-compose build webservice
+// curl http://localhost:3000
+
+
+//more terminal 
+// vi docker-compose.yml
+
+/*
+webservice:
+	build: . 
+	ports:
+		- "3000:80"
+	environment: 
+		port: "80"
+	volumes:
+		- .:/user/src/app
+
+*/
+
+//terminal
+// vi Dockerfile
+// vi server.js
+// docker-compose up -d
+// curl http://localhost:3000
+// docker stop 19868a4cae3b
+// vi server.js
+// docker-compose up -d
+// curl http://localhost:3000
+// docker ps
+// docker exec -it 44262af7e8eb /bin/bash
+// touch tempfile
+
+
+
+
+
+
+
+
+
+

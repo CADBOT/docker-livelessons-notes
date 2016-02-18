@@ -1,0 +1,75 @@
+//terminal
+// vi apache-pod.yaml
+
+/* apache-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+ name: frontend
+ labels:
+ 	tier: frontend
+spec: 
+	containers:
+	- name: apache
+		image: httpd
+		ports:
+		- container: 80
+
+*/
+
+//terminal
+// kubectl create -f apache-pod.yaml
+// get pod
+// kubectl get pod frontend
+// kubectl get pod -l tier=frontend
+// kubectl delete pod -l tier=frontend
+// vi apache-pod.yaml
+
+/* apache-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+ name: fe1
+ labels:
+ 	tier: frontend
+spec: 
+	containers:
+	- name: apache
+		image: httpd
+		ports:
+		- container: 80
+*/
+
+//terminal
+// kubectl create -f apache-pod.yaml
+// vi apache-pod.yaml
+
+/* apache-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+ name: fe2
+ labels:
+ 	tier: frontend
+spec: 
+	containers:
+	- name: apache
+		image: httpd
+		ports:
+		- container: 80
+*/
+
+//terminal
+// kubectl create -f apache-pod.yaml
+// get pod fe1
+// get pod fe2
+// kubectl get pod -l tier=frontend
+// kubectl get pods/fe1
+// kubectl get pods/fe1 -o json | less
+
+
+
+
+
+
+

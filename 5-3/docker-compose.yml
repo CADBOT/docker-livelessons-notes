@@ -1,0 +1,20 @@
+database:
+	image: mongo
+
+notifications:
+	build: ./notifications-service
+	environment:
+		port: "80"
+
+api:
+	build: .
+	volumes:
+		- .:/usr/src/app
+	ports:
+		- "3000:80"
+	links:
+		- database
+		- notifications
+	environment:
+		port: "80"
+		mongoUri: "mongodb://database/app-dev"

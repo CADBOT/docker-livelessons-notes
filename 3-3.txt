@@ -1,0 +1,15 @@
+/* just github setup and docker setup
+create a repository in github and create automated build on dockerhub
+find the github repository
+
+*/
+
+//terminal 
+// vi server.js
+/*
+change console.log in server.js file to "Hello world again"
+*/
+//terminal
+// git add server.js
+// git commit - m "update app"
+// git push origin master

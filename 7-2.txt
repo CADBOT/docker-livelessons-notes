@@ -1,0 +1,10 @@
+//terminal
+// docker pull swarm
+// docker run swarm
+// docker run swarm create
+
+/*
+save token
+in this case
+40148c6e559e2a0fc64bfd320fcbf6b8
+*/

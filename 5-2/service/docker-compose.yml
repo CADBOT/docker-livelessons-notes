@@ -1,0 +1,14 @@
+database:
+	image: mongo
+
+api:
+	build: .
+	volumes:
+		- .:/usr/src/app
+	ports:
+		- "3000:80"
+	environment:
+		port: "80"
+		mongoUri: "mongodb://database/app-dev"
+	links:
+		- database

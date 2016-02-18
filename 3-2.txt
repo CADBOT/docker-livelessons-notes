@@ -1,0 +1,5 @@
+//terminal
+// docker build -t cadbot/myservice:latest .  "specifying a specific githube location"
+// docker login
+// docker push cadbot/myservice
+// docker pull cadbot/myservice

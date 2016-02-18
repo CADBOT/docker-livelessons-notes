@@ -1,0 +1,18 @@
+database:
+	image: mongo
+
+notifications:
+	image: cadbot/notifications
+	environment:
+		port: "80"
+
+api:
+	build: .
+	ports:
+		- "80:80"
+	links:
+		- database
+		- notifications
+	environment:
+		port: "80"
+	env_file: .env	

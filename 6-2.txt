@@ -1,0 +1,41 @@
+//terminal
+// cd notifications-service/
+// docker built -t cadbot/notifications:latest .
+// docker login
+// docker push cadbot/notifications
+// cd ..
+// docker build -t cadbot/myservice2:latest
+// docker push cadbot/myservice
+// vi -p docker-compose.yml production-docker-compose.yml
+
+/* production-docker-compose.yml
+database:
+	image: mongo
+
+notifications:
+	image: cadbot/notifications
+	environment:
+		port: "80"
+
+api:
+	build: .
+	ports:
+		- "80:80"
+	links:
+		- database
+		- notifications
+	environment:
+		port: "80"
+	env_file: .env	
+*/
+
+//terminal
+// vi .env
+
+/* .env
+mongoUri=mongodb://database/app
+
+*/
+
+//terminal
+// docker-compose -f production-docker-compose.yml up

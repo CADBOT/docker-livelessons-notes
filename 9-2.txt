@@ -1,0 +1,26 @@
+// sudo docker run --net=host -d gcr.io/google_containers/etcd:2.0.9 /usr/local/bin/etcd --addr=127.0.0.1:4001 --bind-addr=0.0.0.0:4001 --data-dir=/var/etcd/data
+/* docker run \
+    --volume=/:/rootfs:ro \
+    --volume=/sys:/sys:ro \
+    --volume=/dev:/dev \
+    --volume=/var/lib/docker/:/var/lib/docker:ro \
+    --volume=/var/lib/kubelet/:/var/lib/kubelet:rw \
+    --volume=/var/run:/var/run:rw \
+    --net=host \
+    --pid=host \
+    --privileged=true \
+    -d \
+    gcr.io/google_containers/hyperkube:v1.0.1 \
+    /hyperkube kubelet --containerized --hostname-override="127.0.0.1" --address="0.0.0.0" --api-servers=http://localhost:8080 --config=/etc/kubernetes/manifests
+*/
+// docker run -d --net=host --privileged gcr.io/google_containers/hyperkube:v1.0.1 /hyperkube proxy --master=http://127.0.0.1:8080 --v=2
+// which kubectl
+// kubectl
+// cd bin
+// wget https://storage.googleapis.com/kubernetes-release/release/v0.18.2/bin/linux/amd64/kubectl
+// chmod u+x kubectl
+// kubectl -s http://localhost:8080 run nginx --image=nginx --port=80
+// kubectl expose rc nginx --port=80
+// get service
+
+

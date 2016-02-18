@@ -1,0 +1,38 @@
+// kubectl create -f apache-pod.yaml
+// kubectl get pods
+// kubectl delete pod fe2
+// vi apache-rc.yaml
+
+/* apache-rc.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+	name: frontend-rc
+spec:
+	replicas: 3
+	selector: 
+		tier: frontend
+	template: 
+		metadata:
+			labels:
+				tier: frontend
+		spec: 
+			container:
+			- name: apache
+				image: httpd
+				ports: 
+				- containerPort: 80 
+*/
+
+//terminal
+// kubectl create -f apache-rc.yaml
+// kubectl get rc 
+// kubectl get rc frontend-rc
+// kubectl get pods
+// kubectl delete pod frontend-rc-35aca
+// kubectl get pod
+// kubectl get pods
+// kubectl get rc 
+// kubectl delete rc frontend-rc
+// kubectl get rc 
+// kubectl get pods

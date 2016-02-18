@@ -1,0 +1,51 @@
+//terminal
+// vi nginx-pod-style.yaml
+
+/* nginx-pod-style.yaml
+apiVersion: v1
+kind: Pod
+metadata: 
+	name: nginx
+spec:
+	containers:
+	- name: nginx
+		image: nginx
+		ports:
+		- containerPort: 80
+*/
+
+//terminal
+// kubectl create -f nginx-pod-style.yaml
+// kubectl get pod
+// kubectl get pod
+// wget 172.17.0.10
+// kubectl delete pod nginx
+// kubectl get pod
+// vi nginx-sql-pod-style.yaml
+
+/* nginx-sql-pod-style.yaml
+apiVersion: v1
+kind: Pod
+metadata: 
+	name: web
+spec:
+	containers:
+	- name: nginx
+		image: nginx
+		ports:
+		- containerPort: 80
+	- name: database
+		image: postgres
+		volumeMounts:
+		-name: postgres-storage
+			mountPath: /data/storage
+	volumes:
+	-name: postgres-storage
+		emptyDir: {}
+
+*/
+
+//terminal
+// kubectl create -f nginx-sql-pod-style.yaml
+
+

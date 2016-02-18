@@ -1,0 +1,14 @@
+//terminal 
+// docker-machine create -d digitalocean --digitalocean-access-token bb44ble0cfeda699355edcfe32e8c0a865ddabb835a69ffccda8603947b256df1 --digitalocean-region sfo1 staging
+// docker-machine ls
+// eval (docker-machine env staging)
+// docker status
+// docker info
+// docker-machine ssh staging
+// ls
+// docker ps
+// ctrl c     (exiting)
+// docker run -d -p 80:3000 cadbot/myservice
+// docker-machine ip staging
+// docker-machine ls
+// curl (docker-machine ip staging)

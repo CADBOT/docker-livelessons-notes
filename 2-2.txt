@@ -1,0 +1,100 @@
+// inside directory 
+// microservice-externaldb/
+// officalNodeDockerfile
+// node-microservice/
+// two-microservices/
+
+// terminal commands
+// vi officialNodeDockerfile
+/*
+FROM buildpack-deps:jessie
+
+#verify gpg and sha256: http://nodejs.org/dist/v0.10.30/SHASUMS256.txt.asc
+#gpg: aka "Timothy J Fontaine (Work) <tj.fontaine@joyent.com>"
+#gpg: aka "Julien Gilli <jgilli@fastmail.fm>"
+RUN gpg --keyserver pool.sks-keyservers.net --recv-keys 7937DFD2AB06298B229
+
+EVN NODE_VERSION 0.10.40
+ENV NPM_VERSION 2.11.3
+
+RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-l"
+		&& curl -SLO "https://nodesjs.ord/dist/v$NODE_VERSION/SHASUM256.txt.asc"
+		&& gpg --verify SHASUMS256.txt.asc \
+		&& grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc |
+		&& tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --stri
+		&& rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc \
+		&& npm install -g npm@"$NPM_VERSION" \
+		&& npm cache clear
+
+CMD [ "node" ]		
+*/
+
+// next terminal command 
+// docker run -it node
+// docker pull node
+// docker run -it node   "drops into node terminal"
+// console.log('hello');
+
+// terminal commands
+//cd node-microservice/
+//inside node-microservice/
+//Dockerfile 
+//node_modules/ 
+//package.json
+//server.js
+
+//terminal  
+//vi server.js
+
+/* inside server.js 
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res) {
+	res.json({'msg': 'helloworld'})
+});
+
+var port = process.env.port || 3000;
+app.listen(port, function() {
+	console.log('server started');
+});
+*/
+
+//terminal
+// node server.js &
+// curl http://localhost:3000
+// vi Dockerfile
+
+/* inside DockerFile
+FROM node:0.12.7
+
+RUN mkdir -p /user/src/app
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+RUN npm install
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
+*/
+
+//terminal
+//npm install
+//rm -r node_modules/
+//docker build -t myservice .
+//docker run my-service
+//docker run -P -d myservice
+//docker ps
+//curl http://localhost:37269
+//git init
+//git add Dockerfile package.json server.js
+//git commit -m 'initial commit dockerized app'
+
+
+
+
+
+
+
+

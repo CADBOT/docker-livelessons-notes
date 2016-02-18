@@ -1,0 +1,10 @@
+//terminal
+// docker-machine create -d digitalocean \
+// --digitalocean-access-token bb44ble0cfeda699355edcfe32e8c0a865ddabb835a69ffccda8603947b256df1 \
+// --swarm \
+// --swarm-master \ 
+// --swarm-discovery token://40148c6e559e2a0fc64bfd320fcbf6b8 \
+// docker-machine ls
+// eval (docker-machine env --swarm swarm-master)
+// docker info
+// 
