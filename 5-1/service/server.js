@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/', functin(req, res) {
+app.get('/', function(req, res) {
 	res.json({'msg': 'some message'})
 });
 
