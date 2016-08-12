@@ -1,6 +1,6 @@
-ROM node:0.12.7
+FROM node:0.12.7
 
-RUN mkdir -p /user/src/app
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
