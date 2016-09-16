@@ -1,6 +1,6 @@
 //terminal
 // which docker-machine
-// wget https://githube.com/docker/machine/releases/download/v0.3.0/docker-machine_linux-amd64
+// wget https://github.com/docker/machine/releases/download/v0.3.0/docker-machine_linux-amd64
 // docker-machine ls
 // docker-machine create --driver virtualbox dev
 // docker-machine ls
