@@ -1,5 +1,5 @@
 var express = require('express');
-var app = expess();
+var app = express();
 
 app.get('/notify', function(req, res) {
 	//Code to sned user an email notification...
