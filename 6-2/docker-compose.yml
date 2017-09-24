@@ -1,4 +1,4 @@
 notifications:
-	build: .
-	ports:
-	 - "3000:80"
+ build: .
+ ports:
+  - "3000:80"
